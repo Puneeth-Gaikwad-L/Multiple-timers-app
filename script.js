@@ -44,6 +44,7 @@ function clearFormInputs() {
 }
 
 function createTimer(hour, minute, second) {
+    let pTag = document.getElementById("pTag");
     // creating a new parent element
     const timerElement = document.createElement('div');
     timerElement.classList.add('StartedTimer');
@@ -55,8 +56,15 @@ function createTimer(hour, minute, second) {
     // setting up delete button
     const delButton = document.createElement('button');
     delButton.innerText = "Delete";
-    delButton.addEventListener("click", function () {     // function to delete a timer
+    // function to delete a timer
+    delButton.addEventListener("click", function () {
         timersContainer.removeChild(timerElement);
+        console.log(timersContainer.children.length);
+        // Check if there are no more timer elements in timersContainer
+        if (timersContainer.children.length === 1) {
+            console.log(timersContainer.children.length);
+            pTag.style.display = "flex";
+        }
     });
     delButton.classList.add("btn");
 
@@ -66,7 +74,6 @@ function createTimer(hour, minute, second) {
     timerElement.appendChild(delButton);
 
 
-    let pTag = document.getElementById("pTag");
     pTag.style.display = "none";
 
     // adding a new timer
