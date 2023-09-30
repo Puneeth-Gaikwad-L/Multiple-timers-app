@@ -16,15 +16,20 @@
 <body>
     <main>
         <h1>Multiple Timers App</h1>
-        <form action="">
+        <form id="form">
             <label for="hour">Set:</label>
-            <input id="hour" type="number">
+            <input id="hour" type="number" min="00" max="23" value="00" name="hour">
             <label for="minute">:</label>
-            <input id="minute" type="number">
+            <input id="minute" type="number" min="0" max="59" value="00" name = "minutes">
             <label for="second">:</label>
-            <input id="second" type="number">
-            <button class="btn" type="submit">Set</button>
+            <input id="second" type="number" min="0" max="59" value="00" name = "second">
+            <button class="btn">Set</button>
         </form>
+        <div id="errors">errors</div>
+        <h3 class="current_timers">Current Timers</h3>
+        <div id="timersContainer">
+            <p id="pTag">You have no timers currently !</p>
+        </div>
     </main>
     <script src="./script.js"></script>
 </body>

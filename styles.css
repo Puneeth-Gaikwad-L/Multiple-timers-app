@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-main{
+main {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -13,14 +13,14 @@ main{
     font-family: 'Roboto', sans-serif;
 }
 
-h1{
+h1 {
     margin-top: 20px;
     text-align: center;
     width: 100%;
     height: fit-content;
 }
 
-form{
+form {
     width: 30%;
     height: 50px;
     background-color: #34344A;
@@ -31,9 +31,10 @@ form{
     overflow: hidden;
     border-radius: 10px;
     margin-top: 20px;
+    padding: 10px;
 }
 
-input{
+input {
     border: none;
     width: 50px;
     height: 30px;
@@ -43,10 +44,81 @@ input{
     font-size: 24px;
 }
 
-.btn{
+.btn {
     border: none;
     padding: 10px 30px;
     border-radius: 10px;
     background-color: #F0F757;
-    font-weight: 600;
+}
+
+#timersContainer{
+    width: 800px;
+    height: 500px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+    overflow-y: scroll;
+    white-space: nowrap;
+    padding: 50px;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+::-webkit-scrollbar-thumb{
+    background: #34344A;
+}
+
+#errors{
+    background-color: rgba(255, 0, 0, 0.207);
+    height: 30px;
+    width: 20%;
+    margin-inline: auto;
+    margin-top: 20px;
+    border-radius: 50px;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    display: none;
+    overflow: hidden;
+}
+
+.current_timers{
+    text-align: center;
+    width: 20%;
+    margin-inline: auto;
+    background-color: #39393E;
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.StartedTimer{
+    width: 70%;
+    height: 50px;
+    background-color: #34344A;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    color: #FFF;
+    flex-shrink: 0;
+}
+
+.timesUp{
+    background-color:#F0F757;
+    color: #34344A;
+    font-size: 30px;
 }
