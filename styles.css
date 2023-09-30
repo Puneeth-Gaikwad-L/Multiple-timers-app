@@ -122,3 +122,26 @@ input {
     color: #34344A;
     font-size: 30px;
 }
+
+@media only screen and (min-width:300px) {
+    main{
+        width: 100vw;
+        height: 100vh;
+    }
+    #timersContainer{
+        width: 300px;
+        margin-inline: auto;
+        padding: 5px;
+    }
+
+    .StartedTimer{
+        width: 100%;
+    }
+
+    .current_timers{
+        width: 50%;
+    }
+    form{
+        width: 80%;
+    }
+}
