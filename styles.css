@@ -123,7 +123,7 @@ input {
     font-size: 30px;
 }
 
-@media only screen and (min-width:300px) {
+@media only screen and (max-width:600px) {
     main{
         width: 100vw;
         height: 100vh;
