@@ -87,6 +87,8 @@ function createTimer(hour, minute, second) {
             // adding the text
             timerElement.textContent = "Time's up";
             timerElement.classList.add("timesUp");
+            let audio = new Audio('./mixkit-alarm-tone-996.wav');
+            audio.play();
         } else {
             timeDisplay.textContent = `${formatTime(hour)}:${formatTime(minute)}:${formatTime(second)}`;
             if (second === 0) {
